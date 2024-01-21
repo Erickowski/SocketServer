@@ -7,13 +7,13 @@ const { Sockets } = require("./socket");
 
 export class ServerModel {
   app: any;
-  port: number;
+  port: string;
   server: any;
   io: any;
 
   constructor() {
     this.app = express();
-    this.port = 3000;
+    this.port = process.env.PORT;
     this.server = http.createServer(this.app);
     this.io = new Server(this.server);
   }
