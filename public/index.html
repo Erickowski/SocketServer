@@ -60,7 +60,6 @@
     });
 
     socket.on("message-from-server", (data) => {
-      console.log(data);
       myMessages.innerHTML += `<li>${data.text}</li>`;
     });
   </script>
